@@ -1,9 +1,32 @@
 <!-- src/routes/+page.svelte -->
-<script>
+<script lang="ts">
+	import Logo from '$lib/assets/Digi_logo.png';
+	import { createModalPopup } from '$lib/scripts/viewink.mjs';
 	import { productStore } from '$lib/stores/productStore';
 
 	// Get featured products (first 3)
 	$: featuredProducts = $productStore.slice(0, 3);
+
+	let store_name = 'lnko';
+	const URL = 'https://vto.digiwearit.com';
+	const modal = createModalPopup({
+		url: `${URL}/vto/:store_name/:product_slug/`,
+		sandbox: 'allow-forms allow-scripts allow-same-origin allow-popups allow-downloads',
+		onClose: () => {
+			const modal = createModalPopup({
+				url: `${URL}/vto/feedback/`,
+				sandbox: 'allow-forms allow-scripts allow-same-origin'
+			});
+			modal.openPopup();
+		}
+	});
+
+	function openPopup(productSlug: string) {
+		modal.openPopup({
+			store_name: store_name,
+			product_slug: productSlug
+		});
+	}
 </script>
 
 <svelte:head>
@@ -35,16 +58,25 @@
 				<div
 					class="overflow-hidden rounded-lg bg-white shadow-md transition duration-300 hover:shadow-lg"
 				>
-					<a href={`/shop/${product.id}`}>
-						<div class="flex h-48 items-center justify-center bg-gray-200">
-							<img src={product.image} alt={product.name} class="h-full w-full object-contain" />
-						</div>
-						<div class="p-4">
+					<div class="flex h-48 items-center justify-center bg-gray-200">
+						<img src={product.image} alt={product.name} class="h-full w-full object-contain" />
+					</div>
+					<div class="p-4">
+						<a href={`/shop/${product.id}`}>
 							<h3 class="mb-2 font-semibold">{product.name}</h3>
-							<p class="mb-2 text-sm text-gray-600">{product.category}</p>
+						</a>
+						<p class="mb-2 text-sm text-gray-600">{product.category}</p>
+						<div class="flex items-center justify-between">
 							<p class="text-lg font-bold">${product.price}</p>
+							<button
+								class="flex flex-col items-center space-x-1 rounded-md border-1 border-solid border-blue-900/80 bg-blue-100 px-3 py-2 text-blue-900 hover:border-none hover:bg-blue-200/90 hover:text-blue-500"
+								on:click={() => openPopup(product.slug)}
+							>
+								<img src={Logo} alt="Logo" class="size-14 object-contain" />
+								<span>Try Now</span>
+							</button>
 						</div>
-					</a>
+					</div>
 				</div>
 			{/each}
 		</div>
