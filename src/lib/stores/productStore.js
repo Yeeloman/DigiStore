@@ -1,11 +1,11 @@
 // src/lib/stores/productStore.js
 import { writable } from 'svelte/store';
 
-import ClassicBlackFrame from '$lib/assets/products/classic_black_frame.jpg';
-import ModernRoundGlasses from '$lib/assets/products/modern_round_glasses.webp';
-import SleekSilverFrame from '$lib/assets/products/sleek_silver_frame.jpg';
-import RetroGoldenFrame from '$lib/assets/products/retro_golden_frame.jpg';
-import MinimalistWhiteFrame from '$lib/assets/products/minimalist_white_frame.jpg';
+import ClassicBlackFrame from '$lib/assets/products/glasses_1.png';
+import ModernRoundGlasses from '$lib/assets/products/glasses_2.png';
+import SleekSilverFrame from '$lib/assets/products/glasses_3.png';
+import RetroGoldenFrame from '$lib/assets/products/glasses_4.png';
+import MinimalistWhiteFrame from '$lib/assets/products/glasses_5.png';
 // Sample products data
 const products = [
 	{
