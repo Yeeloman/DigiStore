@@ -71,7 +71,7 @@
 					</button>
 
 					<button
-						class="mb-4 rounded-md bg-blue-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-600"
+						class="w-full rounded-md bg-[#3b82f6] px-6 py-3 font-medium text-white transition duration-300 hover:bg-blue-700 md:w-auto"
 						on:click={() => openPopup(product.slug)}
 					>
 						Try On Glasses
