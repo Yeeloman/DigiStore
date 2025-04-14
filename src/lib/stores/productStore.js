@@ -1,11 +1,11 @@
 // src/lib/stores/productStore.js
 import { writable } from 'svelte/store';
 
-import ClassicBlackFrame from '$lib/assets/products/glasses_1.png';
-import ModernRoundGlasses from '$lib/assets/products/glasses_2.png';
-import SleekSilverFrame from '$lib/assets/products/glasses_3.png';
-import RetroGoldenFrame from '$lib/assets/products/glasses_4.png';
-import MinimalistWhiteFrame from '$lib/assets/products/glasses_5.png';
+import odyssey from '$lib/assets/products/odyssey.webp';
+import peyton from '$lib/assets/products/peyton.webp';
+import jamaica from '$lib/assets/products/Jamaica.png';
+import shiny from '$lib/assets/products/Shiny-5.png';
+import blackGlasses from '$lib/assets/products/Black.webp';
 // Sample products data
 const products = [
 	{
@@ -13,7 +13,7 @@ const products = [
 		name: "Classic Aviator",
 		description: "Timeless aviator style with polarized lenses for reduced glare and enhanced clarity.",
 		price: 129.99,
-		image: ClassicBlackFrame,
+		image: odyssey,
 		category: "Sunglasses",
 		slug: "odyssey",
 		features: ["Polarized", "UV Protection", "Metal Frame"]
@@ -23,7 +23,7 @@ const products = [
 		name: "Modern Round",
 		description: "Contemporary round frames with blue light filtering technology, perfect for digital screens.",
 		price: 99.99,
-		image: ModernRoundGlasses,
+		image: peyton,
 		category: "Eyeglasses",
 		slug: "peyton",
 		features: ["Blue Light Filter", "Anti-Reflective", "Lightweight"]
@@ -33,7 +33,7 @@ const products = [
 		name: "Retro Wayfarer",
 		description: "Iconic wayfarer design with premium acetate frames and gradient lenses.",
 		price: 149.99,
-		image: SleekSilverFrame,
+		image: jamaica,
 		category: "Sunglasses",
 		slug: "jamaica",
 		features: ["Gradient Lenses", "UV Protection", "Premium Acetate"]
@@ -43,7 +43,7 @@ const products = [
 		name: "Sport Wrap",
 		description: "Athletic-inspired wrap sunglasses with impact-resistant lenses for outdoor activities.",
 		price: 119.99,
-		image: MinimalistWhiteFrame,
+		image: blackGlasses,
 		category: "Sunglasses",
 		slug: "shiny-5",
 		features: ["Impact-Resistant", "Wrap Design", "Rubber Nose Pads"]
@@ -53,7 +53,7 @@ const products = [
 		name: "Designer Square",
 		description: "Elegant square frames with subtle detailing for a sophisticated look.",
 		price: 179.99,
-		image: RetroGoldenFrame,
+		image: shiny,
 		category: "Eyeglasses",
 		slug: "black",
 		features: ["Premium Materials", "Spring Hinges", "Anti-Scratch Coating"]

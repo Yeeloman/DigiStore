@@ -45,7 +45,7 @@
 				<div
 					class="flex h-64 items-center justify-center overflow-hidden rounded-lg bg-gray-200 md:h-96"
 				>
-					<img src={product.image} alt={product.name} class="h-full w-full object-contain" />
+					<img src={product.image} alt={product.name} class="h-full w-full object-cover" />
 				</div>
 
 				<div>

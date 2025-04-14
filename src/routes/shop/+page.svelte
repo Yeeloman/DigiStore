@@ -18,7 +18,7 @@
 				>
 					<a href={`/shop/${product.id}`}>
 						<div class="flex h-56 items-center justify-center bg-gray-200">
-							<img src={product.image} alt={product.name} class="h-full w-full object-contain" />
+							<img src={product.image} alt={product.name} class="h-full w-full object-cover" />
 						</div>
 						<div class="p-4">
 							<h2 class="mb-1 font-semibold">{product.name}</h2>

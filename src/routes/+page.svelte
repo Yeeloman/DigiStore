@@ -59,7 +59,7 @@
 					class="overflow-hidden rounded-lg bg-white shadow-md transition duration-300 hover:shadow-lg"
 				>
 					<div class="flex h-48 items-center justify-center bg-gray-200">
-						<img src={product.image} alt={product.name} class="h-full w-full object-contain" />
+						<img src={product.image} alt={product.name} class="h-full w-full object-cover" />
 					</div>
 					<div class="p-4">
 						<a href={`/shop/${product.id}`}>
